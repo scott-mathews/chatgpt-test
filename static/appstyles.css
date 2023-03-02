@@ -1,0 +1,50 @@
+.conversation {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    /* a nice off blue color: #f2f2f2; */
+    background-color: #f2f2f2;
+    border-color: #ebccd1;
+    /* a subtle black color: #333; */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.message__role {
+    font-weight: bold;
+    background-color: #fff;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 4px 0px 4px 0px;
+}
+
+.message__role::after {
+    content: ":";
+}
+
+.message__content {
+    padding: 10px;
+    background-color: white;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.system > .message__role {
+    background-color: aquamarine;
+}
+
+.assistant > .message__role {
+    background-color: lightcoral;
+}
+
+.user > .message__role {
+    background-color: lightblue;
+}

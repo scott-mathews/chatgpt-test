@@ -1,6 +1,44 @@
+body {
+    font-family: Segoe UI, -apple-system, Arial, Helvetica, sans-serif;
+}
+
+#messages-root {
+    display: flex;
+    flex-direction: column;
+}
+
+#conversation-inputs {
+    padding-top: 10px;
+    display: flex;
+}
+
+#conversation-input {
+    width: 550px;
+    height: 100px;
+}
+
+#send-button {
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#reset-button {
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .conversation {
     display: flex;
     flex-direction: column;
+    max-width: 650px;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 5px;
+    /* border: 1px solid white; */
 }
 
 .message {
@@ -12,11 +50,14 @@
     display: flex;
     flex-direction: column;
     padding: 0px 0px 0px 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     max-width: 500px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 4px;
+}
+
+.message.user {
+    align-self: flex-end;
 }
 
 .message__role {

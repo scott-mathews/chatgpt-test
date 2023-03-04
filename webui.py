@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import openai
+from prompts import HEMINGWAY, NERO
+from secret import OPENAI_KEY
 
 app = Flask(__name__, static_url_path='', static_folder='static')
-openai.api_key = ""
+openai.api_key = OPENAI_KEY
 
 
 @app.route('/')
@@ -14,7 +16,7 @@ def index():
 # Each Dict has keys 'role' and 'content'
 # role is either 'system', 'user', or 'assistant'
 # see: https://platform.openai.com/docs/guides/chat/introduction
-start_message = 'You are the stoic philosopher, Epictetus. You are a practitioner of stoic techniques.'
+start_message = HEMINGWAY
 conversation_state = [ { 'role': 'system', 'content': start_message } ]
 
 @app.route('/conversation', methods=['GET', 'POST'])

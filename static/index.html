@@ -6,9 +6,13 @@
     </head>
     <body>
         <h1>My Assistant UI</h1>
-        <input type="submit" value="Reset" onclick="onReset()" />
-        <div id="conversation-root"></div>
-        <input type="text" id="conversation-input" />
-        <input type="submit" value="Send" onclick="onSubmitMessage()" />
+        <div id="conversation-root">
+            <div id="messages-root"></div>
+            <div id="conversation-inputs">
+                <textarea type="text" id="conversation-input"></textarea>
+                <input type="submit" value="Send" id="send-button" onclick="onSubmitMessage()" />
+                <input type="submit" value="Reset" id="reset-button" onclick="onReset()" />
+            </div>
+        </div>
     </body>
 </html>

@@ -11,7 +11,7 @@ function boot() {
     console.log("booting up")
 
     // get the root element
-    conversationElement = document.getElementById('conversation-root');
+    conversationElement = document.getElementById('messages-root');
 }
 
 // Call this after events that change the state of the app
